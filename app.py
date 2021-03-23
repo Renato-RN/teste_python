@@ -6,23 +6,24 @@ import mensagens as msg
 def main():
     NOVA_TAREFA     = 1
     CONCLUIR_TAREFA = 2
-    
+    Sair = 3 #eu mudei no site mesmo
+        
     while True:
         msg.exibir_cabecalho()
         msg.exibir_tarefas()
         try:
-            # exibe as opÁıes disponÌveis
+            # exibe as op√ß√µes dispon√≠veis
             opcao = int(input("O que deseja fazer? 1 = Nova tarefa, 2 = Concluir tarefa => "))
 
-            # verifica qual opÁ„o o usu·rio escolheu
+            # verifica qual op√ß√£o o usu√°rio escolheu
             if opcao == NOVA_TAREFA:
                 msg.mostrar_opcao_nova_tarefa()
             elif opcao == CONCLUIR_TAREFA:
                 msg.mostrar_opcao_concluir_tarefa()
             else:
-                print ("OpÁ„o n„o reconhecida, por favor informar um n˙mero")    
+                print ("Op√ß√£o n√£o reconhecida, por favor informar um n√∫mero")    
         except ValueError as e :
-            print ("OpÁ„o n„o reconhecida, por favor informar um n˙mero")
+            print ("Op√ß√£o n√£o reconhecida, por favor informar um n√∫mero")
         except Exception:
             exit(0)
 
